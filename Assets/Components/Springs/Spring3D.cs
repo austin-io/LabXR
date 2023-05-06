@@ -47,6 +47,16 @@ public class Spring3D : MonoBehaviour {
         _target = newTarget;
     }
 
+    ///<summary>Sets the current position. Resets the velocity if necessary</summary>
+    ///<params name="newPosition">The new position to set immediately.</params>
+    ///<params name="resetVelocity">Should the current velocity be set to zero?</params>
+    ///<returns></returns>
+    public void SetPosition(Vector3 newPosition, bool resetVelocity = false) { 
+        _position = newPosition;
+        if(resetVelocity)
+            _velocity = Vector3.zero;
+    }
+
     ///<summary>Sets the current velocity</summary>
     ///<params name="newVelocity">The new velocity to set immediately.</params>
     ///<returns></returns>
