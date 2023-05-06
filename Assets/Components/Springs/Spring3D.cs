@@ -7,14 +7,16 @@ public class Spring3D : MonoBehaviour {
 
     [SerializeField] Vector3 _position, _target;
     [SerializeField] float _frequency, _damping;
+    [SerializeField] bool _useDeltaTime = true;
 
     Vector3 _velocity = Vector3.zero;
 
     ///<summary>Update the spring values</summary>
     void Update() {
-        Vector3 force = _frequency * (_target - _position);
-        _velocity += force;
-        _position += _velocity;
+        float dt = (_useDeltaTime ? Time.deltaTime : 1);
+        Vector3 force = (_frequency * (_target - _position)) * dt;
+        _velocity += force * dt;
+        _position += _velocity * dt;
         _velocity *= _damping;
     }
 
