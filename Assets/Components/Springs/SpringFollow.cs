@@ -7,13 +7,11 @@ public class SpringFollow : MonoBehaviour {
     
     [SerializeField] Spring3D _spring;
     [SerializeField] UxrGrabbableObject _grabbableObject;
-
-    Vector3 _startPosition;
+    [SerializeField] Transform _followPoint;
 
     // Start is called before the first frame update
     void Start() {
-        _startPosition = transform.position;
-        _spring.StopAt(_startPosition);
+        _spring.StopAt(_followPoint.position);
     }
 
     void OnEnable(){
@@ -31,6 +29,7 @@ public class SpringFollow : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         if(_grabbableObject.IsBeingGrabbed) return;
+        _spring.SetTarget(_followPoint.position);
         transform.position = _spring.GetValue();
     }
 }

@@ -14,7 +14,7 @@ public class Spring3D : MonoBehaviour {
     ///<summary>Update the spring values</summary>
     void Update() {
         float dt = (_useDeltaTime ? Time.deltaTime : 1);
-        Vector3 force = (_frequency * (_target - _position)) * dt;
+        Vector3 force = (_frequency * (_target - _position));
         _velocity += force * dt;
         _position += _velocity * dt;
         _velocity *= _damping;
