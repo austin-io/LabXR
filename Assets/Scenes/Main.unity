@@ -527,6 +527,8 @@ GameObject:
   m_Component:
   - component: {fileID: 87321306}
   - component: {fileID: 87321307}
+  - component: {fileID: 87321308}
+  - component: {fileID: 87321309}
   m_Layer: 0
   m_Name: StartObject
   m_TagString: Untagged
@@ -567,7 +569,7 @@ MonoBehaviour:
   _ignoreGrabbableParentDependency: 0
   _priority: 0
   _allowMultiGrab: 1
-  _translationConstraintMode: 1
+  _translationConstraintMode: 0
   _restrictToBox: {fileID: 1952170634}
   _restrictToSphere: {fileID: 0}
   _translationLimitsMin: {x: 0, y: 0, z: 0}
@@ -583,8 +585,8 @@ MonoBehaviour:
   _lockedGrabReleaseDistance: 0.4
   _translationResistance: 0
   _rotationResistance: 0
-  _rigidBodySource: {fileID: 0}
-  _rigidBodyDynamicOnRelease: 1
+  _rigidBodySource: {fileID: 87321309}
+  _rigidBodyDynamicOnRelease: 0
   _verticalReleaseMultiplier: 1
   _horizontalReleaseMultiplier: 1
   _previewGrabPosesMode: 3
@@ -628,7 +630,7 @@ MonoBehaviour:
     _grabberProximityIndex: 0
     _enableOnHandNear: {fileID: 0}
   _additionalGrabPoints: []
-  _useParenting: 0
+  _useParenting: 1
   _autoCreateStartAnchor: 0
   _startAnchor: {fileID: 0}
   _tag: pathfinding
@@ -637,6 +639,35 @@ MonoBehaviour:
   _dropSnapMode: 3
   _dropProximityTransformUseSelf: 1
   _dropProximityTransform: {fileID: 0}
+--- !u!65 &87321308
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87321305}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 0.1, y: 0.1, z: 0.1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &87321309
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87321305}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &98357402
 GameObject:
   m_ObjectHideFlags: 0
@@ -6708,7 +6739,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _compatibleTags:
   - pathfinding
-  _maxPlaceDistance: 0.1
+  _maxPlaceDistance: 0.08
   _alignTransformUseSelf: 1
   _alignTransform: {fileID: 0}
   _dropProximityTransformUseSelf: 1
@@ -7440,6 +7471,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1092687312}
   - component: {fileID: 1092687313}
+  - component: {fileID: 1092687314}
+  - component: {fileID: 1092687315}
   m_Layer: 0
   m_Name: TargetObject
   m_TagString: Untagged
@@ -7480,7 +7513,7 @@ MonoBehaviour:
   _ignoreGrabbableParentDependency: 0
   _priority: 0
   _allowMultiGrab: 1
-  _translationConstraintMode: 1
+  _translationConstraintMode: 0
   _restrictToBox: {fileID: 1952170634}
   _restrictToSphere: {fileID: 0}
   _translationLimitsMin: {x: 0, y: 0, z: 0}
@@ -7496,8 +7529,8 @@ MonoBehaviour:
   _lockedGrabReleaseDistance: 0.4
   _translationResistance: 0
   _rotationResistance: 0
-  _rigidBodySource: {fileID: 0}
-  _rigidBodyDynamicOnRelease: 1
+  _rigidBodySource: {fileID: 1092687315}
+  _rigidBodyDynamicOnRelease: 0
   _verticalReleaseMultiplier: 1
   _horizontalReleaseMultiplier: 1
   _previewGrabPosesMode: 3
@@ -7541,7 +7574,7 @@ MonoBehaviour:
     _grabberProximityIndex: 0
     _enableOnHandNear: {fileID: 0}
   _additionalGrabPoints: []
-  _useParenting: 0
+  _useParenting: 1
   _autoCreateStartAnchor: 0
   _startAnchor: {fileID: 0}
   _tag: pathfinding
@@ -7550,6 +7583,35 @@ MonoBehaviour:
   _dropSnapMode: 3
   _dropProximityTransformUseSelf: 1
   _dropProximityTransform: {fileID: 0}
+--- !u!65 &1092687314
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1092687311}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 0.1, y: 0.1, z: 0.1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &1092687315
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1092687311}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &1110815173
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8905,6 +8967,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1215396133}
   - component: {fileID: 1215396134}
+  - component: {fileID: 1215396135}
+  - component: {fileID: 1215396136}
   m_Layer: 0
   m_Name: WallObject
   m_TagString: Untagged
@@ -8945,7 +9009,7 @@ MonoBehaviour:
   _ignoreGrabbableParentDependency: 0
   _priority: 0
   _allowMultiGrab: 1
-  _translationConstraintMode: 1
+  _translationConstraintMode: 0
   _restrictToBox: {fileID: 1952170634}
   _restrictToSphere: {fileID: 0}
   _translationLimitsMin: {x: 0, y: 0, z: 0}
@@ -8961,8 +9025,8 @@ MonoBehaviour:
   _lockedGrabReleaseDistance: 0.4
   _translationResistance: 0
   _rotationResistance: 0
-  _rigidBodySource: {fileID: 0}
-  _rigidBodyDynamicOnRelease: 1
+  _rigidBodySource: {fileID: 1215396136}
+  _rigidBodyDynamicOnRelease: 0
   _verticalReleaseMultiplier: 1
   _horizontalReleaseMultiplier: 1
   _previewGrabPosesMode: 3
@@ -9006,7 +9070,7 @@ MonoBehaviour:
     _grabberProximityIndex: 0
     _enableOnHandNear: {fileID: 0}
   _additionalGrabPoints: []
-  _useParenting: 0
+  _useParenting: 1
   _autoCreateStartAnchor: 0
   _startAnchor: {fileID: 0}
   _tag: pathfinding
@@ -9015,6 +9079,35 @@ MonoBehaviour:
   _dropSnapMode: 3
   _dropProximityTransformUseSelf: 1
   _dropProximityTransform: {fileID: 0}
+--- !u!65 &1215396135
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215396132}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 0.1, y: 0.1, z: 0.1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &1215396136
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215396132}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1230169367
 GameObject:
   m_ObjectHideFlags: 0
